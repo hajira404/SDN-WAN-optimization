@@ -1,0 +1,74 @@
+{
+  "topology": {
+    "switches": [
+      {
+        "id": "switch1",
+        "name": "Switch 1",
+        "type": "OpenFlow",
+        "links": [
+          {
+            "target": "switch2",
+            "bandwidth": "100Mbps",
+            "latency": "10ms"
+          },
+          {
+            "target": "switch3",
+            "bandwidth": "100Mbps",
+            "latency": "15ms"
+          }
+        ]
+      },
+      {
+        "id": "switch2",
+        "name": "Switch 2",
+        "type": "OpenFlow",
+        "links": [
+          {
+            "target": "switch1",
+            "bandwidth": "100Mbps",
+            "latency": "10ms"
+          },
+          {
+            "target": "switch4",
+            "bandwidth": "50Mbps",
+            "latency": "20ms"
+          }
+        ]
+      },
+      {
+        "id": "switch3",
+        "name": "Switch 3",
+        "type": "OpenFlow",
+        "links": [
+          {
+            "target": "switch1",
+            "bandwidth": "100Mbps",
+            "latency": "15ms"
+          },
+          {
+            "target": "switch4",
+            "bandwidth": "75Mbps",
+            "latency": "25ms"
+          }
+        ]
+      },
+      {
+        "id": "switch4",
+        "name": "Switch 4",
+        "type": "OpenFlow",
+        "links": [
+          {
+            "target": "switch2",
+            "bandwidth": "50Mbps",
+            "latency": "20ms"
+          },
+          {
+            "target": "switch3",
+            "bandwidth": "75Mbps",
+            "latency": "25ms"
+          }
+        ]
+      }
+    ]
+  }
+}

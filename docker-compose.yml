@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+ # Docker compose support intentionally removed
+
+ # The project was simplified to use the lightweight Python demo (Flask + Prometheus
+ # metrics collector). Docker Compose was removed to avoid managing container
+ # dependencies on the local machine. If you need Docker support later, recreate
+ # this file with your desired service definitions.

@@ -1,0 +1,29 @@
+groups:
+  - name: Network Alerts
+    rules:
+      - alert: HighLatency
+        expr: avg_over_time(network_latency_seconds[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High network latency detected"
+          description: "Latency is above 100ms for the last 5 minutes."
+
+      - alert: PacketLoss
+        expr: sum(rate(network_packet_loss_total[5m])) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Packet loss detected"
+          description: "Packet loss is greater than 5% for the last 5 minutes."
+
+      - alert: LinkDown
+        expr: up{job="network"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Network link is down"
+          description: "One or more network links are down."

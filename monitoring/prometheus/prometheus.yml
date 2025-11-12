@@ -1,0 +1,14 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'network_metrics'
+    static_configs:
+      - targets: ['localhost:9100']  # Replace with actual target addresses
+    metrics_path: '/metrics'
+
+  - job_name: 'flow_stats'
+    static_configs:
+      - targets: ['localhost:9200']  # Replace with actual target addresses
+    metrics_path: '/metrics'

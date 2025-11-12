@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and runtime files
+*.log
+*.pid
+
+# OS files
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Sensitive/local environment
+.env
+env/
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+dist/
+build/

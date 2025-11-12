@@ -1,0 +1,39 @@
+{
+  "switches": [
+    {
+      "id": "switch1",
+      "name": "Switch 1",
+      "ip_address": "192.168.1.1",
+      "port": 6633,
+      "protocol": "OpenFlow",
+      "description": "Main switch for handling traffic."
+    },
+    {
+      "id": "switch2",
+      "name": "Switch 2",
+      "ip_address": "192.168.1.2",
+      "port": 6633,
+      "protocol": "OpenFlow",
+      "description": "Secondary switch for redundancy."
+    },
+    {
+      "id": "switch3",
+      "name": "Switch 3",
+      "ip_address": "192.168.1.3",
+      "port": 6633,
+      "protocol": "OpenFlow",
+      "description": "Edge switch for external connections."
+    }
+  ],
+  "default_flow": {
+    "idle_timeout": 30,
+    "hard_timeout": 60,
+    "priority": 1000,
+    "actions": [
+      {
+        "type": "output",
+        "port": "normal"
+      }
+    ]
+  }
+}
